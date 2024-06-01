@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Scrollbar</title>
+    <style>
+        /* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+        ::-webkit-scrollbar {
+            width: 12px; /* Width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #ff6347; /* Thumb color */
+            border-radius: 10px; /* Roundness of the thumb */
+            border: 3px solid #ffffff; /* Adds a white border around the thumb */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0; /* Track color */
+        }
+
+        /* Custom scrollbar for Firefox */
+        html {
+            scrollbar-color: #ff6347 #e0e0e0; /* thumb-color, track-color */
+        }
+
+        body {
+            height: 200vh; /* Make the page scrollable */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(white, lightgrey);
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Scrollbar Example</h1>
+    <p>Scroll down to see the custom scrollbar in action.</p>
+</body>
+</html>
