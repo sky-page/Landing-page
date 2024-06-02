@@ -8,26 +8,28 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
-
 
 .navbar{
     position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.749);
-    padding: 10px;
+    background-color: rgba(238, 252, 255, 0.749);
+    padding: .2px;
 }
 
 .navbar h1{
     padding: 0 2%;
+    font-family:cursive;
 }
 
 .navbar ul{
     list-style: none;
-    margin: 0;
+    margin: 0 20px;
     padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .navbar li {
@@ -49,7 +51,12 @@ header{
     transition: ease-in .3s;
 }
 
-main .project, main .home, main .about, main .contact{
+body, main{
+    margin: 0;
+    padding: 0;
+}
+
+main .about, main .contact{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -59,17 +66,107 @@ main .project, main .home, main .about, main .contact{
     color: white;
 }
 
-main .home{
-    background-image: linear-gradient(to right, rgb(79, 226, 234), rgb(0, 55, 255));
-    margin-top: 88px;
+main .project{
+    padding-top: 80px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align:center;
+    justify-content:start;
+    flex-direction: column;
     color: white;
-    right: 0;
-    left: 0;
-    box-sizing: border-box;
 }
 
+main .home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(79, 226, 234), rgb(0, 55, 255));
+    color: white;
+    flex-direction: column;
+}
+
+/* home */
+
+.home button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+} 
+
+.home button a{
+    text-decoration: none;
+    color: rgb(56, 162, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: .8rem;
+    padding: 10px 5px;
+}
+
+.home button:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.home button:hover{
+    background-color: blue;
+    color: white;
+    padding: 1px;
+    border-radius: 5px;
+    color: white;
+    border-radius: 20px;
+    /* transition: all 0.4s ease-in-out; */
+    transform: scale(1.2);
+}
+
+.home button:active {
+    color: #000
+}
+.home button:active:after {
+    background: rgba(255, 255, 255, 0.749);
+
+}
+
+.home button:hover:before {
+    opacity: 1;
+}
+
+.home button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+.home h2{
+    margin-top: 0;
+    margin-bottom: 28px;
+}
 main .about{
-    background-image: linear-gradient(to right, rgb(139, 185, 255), rgb(0, 55, 255));
+    background-image: linear-gradient(to right, rgb(55, 115, 255), rgb(63, 212, 245));
 }
 
 main .contact{
@@ -78,6 +175,22 @@ main .contact{
 }
 
 main .project{
-    background-image: linear-gradient(to right, rgb(139, 185, 255), rgb(0, 55, 255));
+    background-image: linear-gradient(to right, rgb(96, 147, 223), rgb(40, 79, 219));
     
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes scale {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.5);}
+}
+
+@keyframes scaleb {
+    0% {transform: scale(1.5);}
+    100% {transform: scale(1);}
 }
