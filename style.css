@@ -51,6 +51,10 @@ header{
     transition: ease-in .3s;
 }
 
+.navbar menu {
+    display: none;
+}
+
 body, main{
     margin: 0;
     padding: 0;
@@ -176,7 +180,6 @@ main .contact{
 
 main .project{
     background-image: linear-gradient(to right, rgb(96, 147, 223), rgb(40, 79, 219));
-    
 }
 
 @keyframes glowing {
@@ -193,4 +196,30 @@ main .project{
 @keyframes scaleb {
     0% {transform: scale(1.5);}
     100% {transform: scale(1);}
+}
+
+/* media */
+@media (min-width: 100px) {
+    .navbar ul{
+        display: inline;
+        float: right;
+        flex-direction: column;
+        text-align: end;
+        justify-content: end;
+        align-items: end;
+    
+    }
+    .navbar .menu{
+        display: block;
+        float: right;
+        margin-right: 15px;
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+        border-radius: 5px;
+        box-shadow: 2px 2px 3px ;
+        z-index: 2;
+        cursor: pointer;
+    }
+
 }
