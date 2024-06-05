@@ -199,15 +199,21 @@ main .project{
 }
 
 /* media */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
+    .navbar {
+        padding: 1px;
+        border: white solid 1px;
+    }
     .navbar ul{
         display: flex;
+        font-size: 12px;
+        margin: 0;
     }
 
     .navbar h1{
-        font-size: 20px;
-        padding-left: 2rem;
+        font-size: 12px;
     }
+
     /* .navbar .menu{
         display: flex;
         float: right;
