@@ -199,18 +199,17 @@ main .project{
 }
 
 /* media */
-@media (min-width: 100px) {
+@media (max-width: 500px) {
     .navbar ul{
-        display: inline;
-        float: right;
-        flex-direction: column;
-        text-align: end;
-        justify-content: end;
-        align-items: end;
-    
+        display: flex;
     }
-    .navbar .menu{
-        display: block;
+
+    .navbar h1{
+        font-size: 20px;
+        padding-left: 2rem;
+    }
+    /* .navbar .menu{
+        display: flex;
         float: right;
         margin-right: 15px;
         width: 20px;
@@ -220,6 +219,6 @@ main .project{
         box-shadow: 2px 2px 3px ;
         z-index: 2;
         cursor: pointer;
-    }
+    } */
 
 }
