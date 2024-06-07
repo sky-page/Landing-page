@@ -1,6 +1,3 @@
-function klik(){
-    var click = document.querySelector('.menu');
-    click.addEventListener('click', function(){
-        
-    })
+function klik(x){
+    x.classList.toggle("change")
 }

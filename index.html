@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <nav class="navbar">
+        <nav>
             <h1>Sky Page</h1>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -16,15 +17,17 @@
                 <li><a href="#project">Project</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <span class="menu" onclick="klik()"></span>
+            <div class="iconMenu" onclick="klik(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </nav>
-
     </header>
-
     <main>
             <section class="home" id="home">
                 <h1>Selamat Datang di <span>Sky Page</span></h1>
-                <h2>Halaman ini akan menampilkan projek/latihan yang telah saya selesaikan</h2>
+                <h2>Halaman ini akan menampilkan projek/latihan yang pernah saya coba</h2>
                 <button><a href="#project">Lihat Projek</a></button>
             </section>
 
