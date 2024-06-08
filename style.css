@@ -155,7 +155,7 @@ main .project{
 }
 
 .home button:active {
-    color: #000000;
+    color: rgb(56, 162, 255);
 }
 
 .home button:active:after {
@@ -176,7 +176,6 @@ main .project{
     left: 0;
     top: 0;
     border-radius: 20px;
-    ani
 }
 
 .home h2{
@@ -274,7 +273,7 @@ main .project{
     
     .home button{
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        color: rgb(56, 162, 255);
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: .85rem;
         padding: 10px 5px;
