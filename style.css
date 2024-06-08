@@ -120,12 +120,13 @@ main .project{
     border-radius: 20px;
 } 
 
-.home button a{
+.home button{
     text-decoration: none;
     color: rgb(56, 162, 255);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: .85rem;
     padding: 10px 5px;
+    transition: transform .4s ease-in-out;
 }
 
 .home button:before{
@@ -146,22 +147,19 @@ main .project{
 }
 
 .home button:hover{
-    color: white;
+    color: rgb(56, 162, 255);
     padding: 1px;
     border-radius: 5px;
-    color: white;
     border-radius: 20px;
-    /* transition: all 0.4s ease-in-out; */
     transform: scale(1.2);
 }
 
 .home button:active {
-    color: #000
+    color: #000000;
 }
 
 .home button:active:after {
     background: rgba(255, 255, 255, 0.749);
-
 }
 
 .home button:hover:before {
@@ -178,6 +176,7 @@ main .project{
     left: 0;
     top: 0;
     border-radius: 20px;
+    ani
 }
 
 .home h2{
@@ -208,6 +207,7 @@ main .project{
 }
 
 .dropdown a {
+    display: none;
     align-items: center;
     justify-content: center;
     color: #ffffff;
@@ -272,15 +272,13 @@ main .project{
         border-radius: 20px;
     }
     
-    .home button a{
+    .home button{
         text-decoration: none;
         color: rgb(0, 0, 0);
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: .85rem;
         padding: 10px 5px;
     }
-
-
 
 }
 
@@ -294,10 +292,10 @@ main .project{
 
 @keyframes scale {
     0% {transform: scale(1);}
-    100% {transform: scale(1.5);}
+    100% {transform: scale(1.2);}
 }
 
 @keyframes scaleb {
-    0% {transform: scale(1.5);}
+    0% {transform: scale(1.2);}
     100% {transform: scale(1);}
 }
